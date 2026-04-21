@@ -3,8 +3,11 @@
 
 ZSH_CONF_DIR="${HOME}/dotfiles/zsh"
 
-for file in "${ZSH_CONF_DIR}"/[0-9][0-9]-*.zsh; do
-  [[ -r "$file" ]] && source "$file"
+for file in \
+  core zinit plugins snippets prompt \
+  history completion keybindings aliases functions hooks integrations
+do
+  [[ -r "${ZSH_CONF_DIR}/${file}.zsh" ]] && source "${ZSH_CONF_DIR}/${file}.zsh"
 done
 
 # zprof
