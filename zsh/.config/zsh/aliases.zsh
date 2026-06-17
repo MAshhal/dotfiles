@@ -38,9 +38,10 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g C='| xclip -selection clipboard'
 
-
 # --- Diagnostics ---
-alias perf='time zsh -i -c exit'
+alias zshtime='time ZSH_DEBUGRC=1 zsh -i -c exit'
+alias myip='curl ifconfig.me'
+alias localip='ip addr show'
 
 alias colorscheme='echo -e "COLOR          NORMAL      INTENSE"; \
 echo -e "Black          \e[30m[Color 0]\e[0m    \e[90m[Color 8]\e[0m"; \

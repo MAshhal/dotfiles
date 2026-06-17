@@ -11,3 +11,8 @@ do
 done
 
 # zprof
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/mystic/.lmstudio/bin"
+# End of LM Studio CLI section
+
