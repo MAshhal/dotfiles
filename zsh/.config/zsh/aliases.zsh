@@ -3,7 +3,7 @@ if command -v eza &>/dev/null; then
   alias ls='eza --color=always --group-directories-first'
   alias ll='eza -la --color=always --group-directories-first --git'
   alias la='eza -a --color=always --group-directories-first'
-  alias lt='eza --tree --color=always --group-directories-first -L 2'
+  alias lt='eza --tree --color=always --group-directories-first --icons -L 2'
 else
   alias ls='ls --color'
   alias ll='ls -lah --color'
@@ -29,6 +29,15 @@ alias -s log=bat
 alias -s kt='$EDITOR'
 alias -s kts='$EDITOR'
 alias -s php='$EDITOR'
+alias -s py='$EDITOR'
+
+# --- Global Aliases ---
+alias -g G='| grep --color=auto'
+alias -g L='| less'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g C='| xclip -selection clipboard'
+
 
 # --- Diagnostics ---
 alias perf='time zsh -i -c exit'

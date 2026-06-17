@@ -1,7 +1,7 @@
 # Uncomment to profile startup
 # zmodload zsh/zprof
 
-ZSH_CONF_DIR="${HOME}/dotfiles/zsh"
+ZSH_CONF_DIR="${HOME}/.config/zsh"
 
 for file in \
   core zinit plugins snippets prompt \
