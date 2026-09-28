@@ -17,8 +17,8 @@ alias clip='xclip -selection clipboard'
 alias dud='du -d 1 -h'
 
 # --- Config shortcuts ---
-alias zshrc="${EDITOR} ~/.zshrc"
-alias prompt_conf="${EDITOR} ~/.config/ohmyposh/${PROMPT_CONFIG_FILENAME}"
+alias zshrc='${=EDITOR} ~/.zshrc'
+alias prompt_conf='${=EDITOR} ~/.config/ohmyposh/${PROMPT_CONFIG_FILENAME}'
 
 # --- Suffix aliases ---
 alias -s json=jless
