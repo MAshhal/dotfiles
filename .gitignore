@@ -1,3 +1,6 @@
 # Ignore temporary files
 *.swp
 *.bak.*
+
+# Machine-specific zsh config
+zsh/.config/zsh/local.zsh

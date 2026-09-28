@@ -6,7 +6,7 @@ Personal shell environment managed with [GNU Stow](https://www.gnu.org/software/
 
 | Package | Contents |
 |---------|----------|
-| `zsh` | `.zshrc` + modular config in `~/.config/zsh/` |
+| `zsh` | `.zshrc` + config modules in `~/.config/zsh/` |
 | `ohmyposh` | Custom Oh My Posh prompt theme |
 | `fastfetch` | Fastfetch system info config |
 
@@ -55,12 +55,15 @@ To stow packages by hand instead, run `stow zsh`, `stow ohmyposh` and `stow fast
 
 ## Zsh configuration
 
-The config is split into focused files sourced in order by `.zshrc`:
+`.zshrc` holds shell options, history and keybindings, then sources the rest of `~/.config/zsh/` in order:
 
-```
-core → zinit → plugins → snippets → prompt →
-history → completion → keybindings → aliases → functions → hooks → integrations
-```
+| File | Contents |
+|------|----------|
+| `plugins.zsh` | Zinit bootstrap, plugins, Oh My Zsh snippets, completion setup |
+| `tools.zsh` | oh-my-posh, fzf, mise and zoxide, each skipped if not installed |
+| `aliases.zsh` | Aliases |
+| `functions.zsh` | Shell functions and the auto-venv hook |
+| `local.zsh` | Optional, git-ignored: machine-specific PATH entries or overrides such as `EDITOR` |
 
 Notable behaviours:
 
